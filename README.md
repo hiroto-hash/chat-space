@@ -39,7 +39,7 @@ Association
 
 |Column|Type|Options|
 |------|----|-------|
-｜name｜string｜null: false｜
+|name|string|null: false|
 
 Association
 - has_many :users, though: users_groups
