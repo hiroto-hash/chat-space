@@ -1,0 +1,25 @@
+.main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__leftbox__current-group
+        group
+      %ul.main-header__leftbox__member-list
+        list :
+        %li.main-header__leftbox__member-list__member
+          member
+    .main-header__edit-btn
+      = link_to "#", class: "edit" do
+        edit
+  .messages
+    .message__upper-info
+      %p.message__upper-info__talker tt
+      %p.message__upper-info__date 20200330
+    %p.message__text likelikelike
+  .form
+    %form.new-message 
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class:"input-box__image__file"}
+      %input{type:"submit", class: "submit-btn"}
