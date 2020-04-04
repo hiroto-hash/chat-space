@@ -2,24 +2,26 @@
   .main-header
     .main-header__left-box
       %h2.main-header__leftbox__current-group
-        group
+        = @group.name
       %ul.main-header__leftbox__member-list
-        list :
-        %li.main-header__leftbox__member-list__member
-          member
+        Menber:
+        - @group.users.each do |user|
+          %li=user.name
     .main-header__edit-btn
-      = link_to "#", class: "edit" do
+      = link_to  edit_group_path(@group) do
         edit
   .messages
-    .message__upper-info
-      %p.message__upper-info__talker tt
-      %p.message__upper-info__date 20200330
-    %p.message__text likelikelike
+    =render @messages do
+      .message__upper-info
+        %p.message__upper-info__talker 
+        %p.message__upper-info__date
+      %p.message__text likelikelike
+    
   .form
-    %form.new-message 
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class:"input-box__image__file"}
-      %input{type:"submit", class: "submit-btn"}
+    .input-box
+      = form_for [@group, @message],html:{class:"form_mask"} do |f|
+        = f.text_field :content, class: 'text',placeholder: "type a message"
+        = f.label :image, class: 'image' do
+          =icon('fas', 'image')
+          = f.file_field :image, class: 'file'
+        = f.submit 'Send', class:'submit-btn'

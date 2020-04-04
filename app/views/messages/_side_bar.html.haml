@@ -12,8 +12,9 @@
             =icon( 'fas', 'cog', class: 'icon')
   .groups
     - current_user.groups.each do |group|
-      = link_to "#", class: 'group' do
-        %p.group__group-name 
-          techcamp
-        %p.group__group-message 
-          まだメッセージがありません
+      = link_to group_messages_path(group), class: 'group' do
+        .groups__group
+          %p.group__group-name
+            = group.name
+          %p.group__group-message 
+            = group.show_last_message
