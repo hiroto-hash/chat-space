@@ -85,6 +85,8 @@ li {
   line-height: 50px;
   font-size: 14px;
   border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
   &:after {
     content: "";
     clear: both;
