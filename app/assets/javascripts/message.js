@@ -36,8 +36,8 @@ $(function(){
                 </p>
                 </div>  
              </div>`
-            return html;
        };
+       return html;
     }
 
     $('#new_message').on('submit', function(e){
