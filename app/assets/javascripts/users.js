@@ -8,7 +8,7 @@ $(function() {
                 `;
     $("#user-search-result").append(html);
   }
-
+  
   function addNoUser() {
     let html = `
       <div class="chat-group-user clearfix">
@@ -47,26 +47,24 @@ $(function() {
           users.forEach(function(user) {
             addUser(user);
           });
-        } 
-        else if (input.length == 0) {
+      } else if (input.length == 0) {
           return false;
-        } 
-        else {
+      } else {
           addNoUser();
-        }
-      })
+      }
+    })
       .fail(function() {
         alert("ユーザー検索に失敗しました。");
       });
-    });
+  });
     $(document).on("click", ".chat-group-user__btn--add", function() {
       const userName = $(this).attr("data-user-name");
       const userId =  $(this).attr("data-user-id");
       $(this)
         .parent()
         .remove();  
-      addDeleteUser(userName, userId);
-      addMember(userId);
+        addDeleteUser(userName, userId);
+        addMember(userId);
     });
     $(document).on("click", ".chat-group-user__btn--remove",function() {
       $(this)
