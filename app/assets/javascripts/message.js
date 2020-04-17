@@ -18,7 +18,6 @@ $(function(){
               <img src=${message.image} >
             </div>  
           </div>`
-          return html;
       }else{
         var html = 
           `<div class="message" data-message-id=${message.id}>
