@@ -96,7 +96,6 @@ li {
     float: left;
   }
   &__btn {
-    // float: right;
     display: inline-block;
     cursor: pointer;
     &--add {
@@ -104,6 +103,7 @@ li {
     }
     &--remove {
       color: #f05050;
+      margin-left: 500px;
     }
   }
 }

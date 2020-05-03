@@ -44,14 +44,15 @@
     .group {
       text-decoration: none;
      &__group-name {
-     font-size: 15px;
-     margin-bottom: 5px;
-     color: white;
+      font-size: 15px;
+      margin-bottom: 5px;
+      color: white;
      }
      &__group-message {
-     font-size: 11px;
-     color: white;
-     }
+      font-size: 11px;
+      color: white;
+      margin-bottom: 40px;
+     } 
     } 
   }
 }
@@ -123,17 +124,13 @@
 }
 
 .form {
-  height: 90px;
   padding: 20px 40px;
   background-color:#d2d2d2;
-  display: flex;
-  width: 80%;
-  position: fixed;
-
    .input-box {
-    width: 100%;
-    position: relative;
-    .form_mask {
+      width: 100%;
+      position: relative;
+      .form_mask {
+        display: flex;
        .text {
         width: 88%;
         height: 50px;
@@ -141,26 +138,27 @@
         border-style: none;
         color: #434a54;
        }
-      .image {
-       position: absolute;
-       top: 10px;
-       right: 150px;
-       cursor: pointer;
-       font-size: 1.3rem;
-       .file {
-       display: none;
+       .image {
+        position: absolute;
+        top: 10px;
+        right: 150px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        
        }
-      }
-      .submit-btn {
-       float: right;
-       height: 50px;
-       padding: 0 30px;
-       margin-left: 15px;
-       background-color: #38aef0;
-       color: white;
-      cursor: pointer;
-      }
-     } 
+       .file {
+        display: none;
+        }
+        .submit-btn {
+          float: right;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+         cursor: pointer;
+         }
+    } 
    }
 }
 
