@@ -82,6 +82,9 @@
     display: flex;
     justify-content: space-between;
     }
+    li {
+      margin-left: 0.3rem;
+    }
   }
   &__edit-btn {
     border: 1px solid #38edf0;
